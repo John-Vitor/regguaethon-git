@@ -2,16 +2,43 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>RegguaeThon 2020 - ZRisk</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="./bootstrap-4.5.0-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./bootstrap-4.5.0-dist/js/bootstrap.js">
+    <link rel="stylesheet" href="css/style.css">
+
+<title>RegguaeThon 2020 - ZRisk</title>
 </head>
 <body>
-    <ul>
-        <li>Amandha</li>
-        <li>Joao</li>
-        <li>Lucas</li>
-        <li>Mariana é safadona</li>
-        <li>Mozart</li>
-    </ul>
+<header class="cabecalho">
+
+    <img class="logo" src="img/logo.png">
+
+</header>
+    <div class="card">
+    <form class="login">
+        <h1 class="titulo">Faça seu login</h1>
+        <form method="POST" action="{{ url_for('autenticar') }}">
+            <input type="hidden" name="proxima" value="{{ proxima or url_for('index') }}">
+            <p><label>Nome de usuário:</label> <input class="form-control" type="text" name="usuario" required></p>
+            <p><label>Senha:</label> <input class="form-control" type="password" name="senha" required></p>
+            <p><button class="btn btn-primary" type="submit">Entrar</button></p>
+        </form>    
+    </form>
+    </div>
+    
+
+<footer class="rodape">
+
+
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
 </body>
+
 </html>
 
